@@ -1,0 +1,171 @@
+.register {
+  &__form {
+    text-align: center;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+  }
+
+  &__group {
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    text-align: left;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 4px;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 23px;
+    left: 15px;
+  }
+
+  &__svg {
+    position: relative;
+  }
+
+  &__agreement {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  &__uncheck {
+    .register__checkbox:checked + .register__icon & {
+      opacity: 0;
+      transition: opacity var(--animation);
+    }
+  }
+
+  &__check {
+    opacity: 0;
+
+    transition: opacity var(--animation);
+
+    .register__checkbox:checked + .register__icon & {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+
+    user-select: none;
+    text-underline-position: under;
+  }
+
+  &__link {
+    color: var(--accent-color);
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 10px 25px;
+
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    cursor: pointer;
+  }
+}
+.register__message {
+  width: 448px;
+  height: 40px;
+
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  padding: 12px 16px;
+  height: 90px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 28px;
+  padding-right: 40px;
+
+  cursor: pointer;
+
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+
+    transition: border-color var(--animation);
+  }
+}
+.register__input {
+  width: 448px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+
+    transition: border-color var(--animation);
+  }
+}
+.register__input:hover + .register__icon,
+.register__input:focus + .register__icon,
+.register__input:hover + .register__message,
+.register__input:focus + .register__message {
+  fill: var(--accent-color);
+
+  transition: fill var(--animation), background-color var(--animation);
+}
+
+.placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}

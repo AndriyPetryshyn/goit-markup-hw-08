@@ -1,0 +1,10 @@
+.logo__section {
+    border: 1px solid #ECECEC;
+}
+
+.logo .link:hover,
+.logo .link:focus,
+.logo .link:active {
+    color: var(--accent-color);
+    transition: color var(--animation);
+}

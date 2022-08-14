@@ -1,0 +1,35 @@
+// Utiles styles
+@import "./utils/variables";
+@import "./utils/vissually-hidden";
+@import "./utils/placeholder";
+@import "./utils/mixins";
+
+// Base styles
+@import "./base/base";
+@import "./base/reset";
+
+// Components styles
+@import "./components/buttons";
+@import "./components/card-set";
+@import "./components/section";
+@import "./components/container";
+@import "./components/overlay";
+@import "./components/backdrop";
+@import "./components/thumbs";
+@import "./components/modal-form";
+@import "./components/logo";
+@import "./components/modal-window";
+@import "./components/portfolio-btn";
+
+
+// Layout styles
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/hero";
+@import "./layout/features";
+@import "./layout/occupation";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/contacts";
+@import "./layout/projects";
+@import "./layout/footer";
