@@ -1,19 +1,32 @@
 .contacts__list {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  gap: 50px;
+  @extend %list;
 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 0;
+
+  margin-bottom: 0;
+  margin-left: 70px;
+  gap: 10px;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
   background-color: var(--main-color);
+  
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 335px;
+  }
 }
 
 .contacts__item {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;

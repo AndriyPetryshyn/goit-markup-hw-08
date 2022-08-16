@@ -1,4 +1,7 @@
 .project {
+  @extend %section;
+  @extend %container;
+
   &__wrapper {
     border-top: none;
     padding-top: 20px;
@@ -14,7 +17,7 @@
 
     font-weight: 700;
     font-size: 18px;
-    line-height: 2;
+    line-height: (calc(36 / 18));
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
   }
@@ -31,6 +34,7 @@
     position: relative;
     overflow: hidden;
     transition: transform var(--animation);
+
   }
 
   &__overlay {
@@ -69,17 +73,23 @@
   }
 
   &__list {
+    @extend %list;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+
+    gap: var(--indent);
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
   }
 }
 
 .project__link {
-  display: block;
-  text-decoration: none;
+  @extend %link;
+  display: flex;
+  
+  width: 100%;
+  flex-direction: column;
 
   transition: box-shadow var(--animation);
 

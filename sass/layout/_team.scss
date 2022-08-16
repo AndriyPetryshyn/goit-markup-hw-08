@@ -1,14 +1,23 @@
 .team {
   @extend %section;
+  @extend %container;
 
   background-color: var(--backround-btncolor);
 
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.14;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+
     text-align: center;
-    margin-bottom: 50px;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      margin-bottom: 50px;
+    }
   }
 
   &__name {
@@ -29,6 +38,19 @@
   }
 
   &__list {
+    @extend %list;
+
+    // @media screen and (min-width: 768px) {
+    //   display: grid;
+    //   grid-gap: 30px;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   justify-content: space-between;
+    // }
+        @media screen and (min-width: 1200px) {
+          grid-template-columns: repeat(4, 1fr);
+          justify-content: space-between;
+        }
+
     display: flex;
     justify-content: center;
     gap: var(--indent);
@@ -50,6 +72,8 @@
   }
 
   &__social {
+    @extend %list;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,11 +87,15 @@
 }
 
 .team__links {
+  @extend %link;
+
   display: flex;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  // width: 44px;
+  // height: 44px;
   background-color: var(--main-color);
   border-radius: 50%;
 

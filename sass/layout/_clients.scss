@@ -1,7 +1,14 @@
 .clients {
   @extend %section;
+  @extend %container;
+
+  @media screen and (min-width:768px) {
+    padding: 60px 0;;
+    }
 
   &__list {
+    @extend %list;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,12 +16,20 @@
 
   &__title {
     display: block;
-
-    text-align: center;
-    margin-bottom: 50px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.14;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 30px;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 50px;
+      }
+        @media screen and (min-width:1200px) {
+        line-height: calc(42 / 36);
+        }
   }
 
   &__item {
@@ -22,11 +37,19 @@
     align-items: center;
     justify-content: center;
     flex-basis: calc(100% - var(--indent) * (var(--items) - 1)) / var(--items);
-    width: 170px;
+    width: 210px;
     height: 92px;
+    @media screen and (min-width:768px) {
+        width: 226px;
+      }
+      @media screen and (min-width:1200px) {
+          width: 170px;
+        }
   }
 
   &__link {
+    @extend %link;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +65,11 @@
     fill: #afb1b8;
 
     transition: fill var(--animation);
+  }
+  &__container {
+    @media screen and (min-width:768px) {
+      width: 768px;
+    }
   }
 }
 

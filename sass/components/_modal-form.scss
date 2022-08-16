@@ -46,7 +46,7 @@
     top: 50%;
     transform: translateY(-50%);
     bottom: 23px;
-    left: 15px;
+    left: 5px;
   }
 
   &__svg {
@@ -58,7 +58,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1716666667;
+    letter-spacing: 0.01em;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
   &__uncheck {
     .register__checkbox:checked + .register__icon & {
@@ -78,14 +85,19 @@
   }
 
   &__text {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.03em;
     color: #757575;
 
     user-select: none;
     text-underline-position: under;
+
+      @media screen and(min-width:$desktop) {
+font-size: 14px;
+line-height: calc(24 / 14);
+        }
   }
 
   &__link {
@@ -111,9 +123,15 @@
     cursor: pointer;
   }
 }
+
 .register__message {
-  width: 448px;
-  height: 40px;
+  width: 370px;
+  height: 120px;
+
+    @media screen and(min-width:$desktop) {
+        width: 448px;
+        height:120px;
+      }
 
   font-size: 12px;
   line-height: 14px;
@@ -126,8 +144,7 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-top: 20px;
-  padding-left: 40px;
+
   padding-bottom: 28px;
   padding-right: 40px;
 
@@ -143,8 +160,16 @@
   }
 }
 .register__input {
-  width: 448px;
+  width: 370px;
   height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+    @media screen and(min-width:$desktop) {
+        width: 448px;
+        height: 40px;
+      }
 
   &:hover,
   &:focus {

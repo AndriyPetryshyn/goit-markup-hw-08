@@ -3,6 +3,7 @@
 @import "./utils/vissually-hidden";
 @import "./utils/placeholder";
 @import "./utils/mixins";
+@import "./utils/breakpoints";
 
 // Base styles
 @import "./base/base";
@@ -11,14 +12,13 @@
 // Components styles
 @import "./components/buttons";
 @import "./components/card-set";
-@import "./components/section";
-@import "./components/container";
 @import "./components/overlay";
 @import "./components/backdrop";
 @import "./components/thumbs";
 @import "./components/modal-form";
 @import "./components/logo";
 @import "./components/modal-window";
+@import "./components/mobile-menu";
 @import "./components/portfolio-btn";
 
 

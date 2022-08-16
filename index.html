@@ -30,13 +30,21 @@
   <body>
     <!--Хедер-->
     <header class="header">
-      <div class="header__container">
+      <div class="menu__nav" >
+      <div class="header__container section">
         <a class="header__link logo" href="./index.html"
           ><span class="header__accent logo">Web</span>Studio</a
         >
+        <button class="menu__btn" type="button" data-menu-open>
+          <svg class="menu__icon" width="40" height="40">
+            <use href="./img/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
         <!--Основна навігація-->
-        <nav class="nav">
-          <ul class="nav__list list">
+        
+          <nav class="nav">
+        
+          <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link link current" href="index.html">Студія</a>
             </li>
@@ -49,9 +57,9 @@
           </ul>
         </nav>
         <!--Контакти-->
-        <ul class="contacts__list list">
+        <ul class="contacts__list">
           <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
               <svg class="contacts__icon" width="16" height="12">
                 <use href=".//img/icons.svg#mail"></use>
               </svg>
@@ -59,7 +67,7 @@
             </a>
           </li>
           <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111">
+            <a class="contacts__link" href="tel:+380961111111">
               <svg class="contacts__icon" width="10" height="16">
                 <use href=".//img/icons.svg#smartphone"></use>
               </svg>
@@ -67,26 +75,32 @@
             >
           </li>
         </ul>
+
+        </div>
+        
+        
       </div>
     </header>
     <!--Основний контент-->
     <main>
       <!--Герой-->
-      <section class="hero overlay">
-        <div class="hero__container">
-          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero__btn btn" type="button" data-modal-open>
-            Замовити послугу
-          </button>
-        </div>
-      </section>
+      <section class="hero">
+          <div class="container">
+            <div class="hero__box">
+              <h1 class="hero__title">
+                Ефективні рішення для вашого бізнесу
+              </h1>
+              <button class="button" type="button" data-modal-open>Замовити послугу</button>
+            </div>
+          </div>
+        </section>
       <!--Особливості-->
       <section class="features">
-        <div class="container">
+        <div class="section">
           <h2 class="features__title visually-hidden">Особливості</h2>
-          <ul class="features__list list">
+          <ul class="features__list">
             <li class="features__item">
-              <div class="features__thumb thumb">
+              <div class="features__thumb thumb ">
                 <svg class="features__icon item" width="70" height="70">
                   <use href=".//img/icons.svg#antenna"></use>
                 </svg>
@@ -139,12 +153,15 @@
       <section class="occupation">
         <div class="container">
           <h2 class="occupation__title">Чим ми займаємося</h2>
-          <ul class="occupation__list card-set list">
+          <ul class="occupation__list card-set">
             <li class="occupation__item card-set-item">
               <img
-                src="./img/main/whatwearedoing/img1.jpg"
+                srcset="./img/main/whatwearedoing/img1-370.jpg 370w, ./img/main/whatwearedoing/img2-740.jpg 740w"
+                sizes="(min-width: 1200px) 370px"
+                src="./img/main/whatwearedoing/img1-370.jpg"
                 alt="людина набирає текст на лептопі"
                 width="370"
+                height="294"
               />
               <div class="occupation__img">
                 <p class="occupation__text">Десктопні додатки</p>
@@ -152,7 +169,8 @@
             </li>
             <li class="occupation__item card-set-item">
               <img
-                src="./img/main/whatwearedoing/img2.jpg"
+                srcset="./img/main/whatwearedoing/2img-370.jpg 370w, ./img/main/whatwearedoing/2img740.jpg 740w"
+                src="./img/main/whatwearedoing/2img-370.jpg"
                 alt="людина тримає в руках телефон"
                 width="370"
               />
@@ -162,7 +180,8 @@
             </li>
             <li class="occupation__item card-set-item">
               <img
-                src="./img/main/whatwearedoing/img3.jpg"
+                srcset="./img/main/whatwearedoing/3img-370.jpg 370w, ./img/main/whatwearedoing/3img-740.jpg 740w"
+                src="./img/main/whatwearedoing/3img-370.jpg"
                 alt="людина тримає в руках планшет"
                 width="370"
               />
@@ -177,22 +196,31 @@
       <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
-          <ul class="team__list card-set list">
-            <li class="team__item card-set-item">
-              <!--Игорь Демьяненко-->
-              <img
-                class="team__img"
-                src="./img/main/team/imgIgor.jpg"
+          <ul class="team__list card-set">
+            <li class="team__item">
+              <!-- Ігор Демяненко -->
+              <img class="team__img"
+                srcset="
+                ./img/main/team/img-1-270.jpg 270w,
+                ./img/main/team/img-1-354.jpg 354w, 
+                ./img/main/team/img-1-450.jpg 450w,
+                ./img/main/team/img-1-540.jpg 540w,
+                ./img/main/team/img-1-708.jpg 708w,
+                ./img/main/team/img-1-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
+                
+                src="./img/main/team/img-1-270.jpg 270w"
+                
                 alt="Член команди"
-                width="270"
+                
               />
               <div class="team__wrapper">
-                <h3 class="team__name">Игорь Демьяненко</h3>
+                <h3 class="team__name">Ігор Демяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
-                <ul class="team__social list">
+                <ul class="team__social">
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -205,7 +233,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -218,7 +246,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -231,7 +259,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -245,21 +273,30 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item card-set-item">
-              <!--Ольга Репина-->
-              <img
-                class="team__img"
-                src="./img/main/team/imgOlga.jpg"
+            <li class="team__item">
+              <!-- Ольга Репина -->
+              <img class="team__img"
+                srcset="
+                ./img/main/team/img-2-270.jpg 270w,
+                ./img/main/team/img-2-354.jpg 354w, 
+                ./img/main/team/img-2-450.jpg 450w,
+                ./img/main/team/img-2-540.jpg 540w,
+                ./img/main/team/img-2-708.jpg 708w,
+                ./img/main/team/img-2-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
+                
+                src="./img/main/team/img-2-270.jpg 270w"
+                
                 alt="Член команди"
-                width="270"
+                
               />
               <div class="team__wrapper">
-                <h3 class="team__name">Ольга Репина</h3>
+                <h3 class="team__name">Ольга Репіна</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
-                <ul class="team__social list">
+                <ul class="team__social">
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -272,7 +309,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -285,7 +322,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -298,7 +335,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -312,21 +349,30 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item card-set-item">
-              <!--Николай Тарасов-->
-              <img
-                class="team__img"
-                src="./img/main/team/imgNick.jpg"
+            <li class="team__item">
+              <!-- Николай Тарасов -->
+              <img class="team__img"
+                srcset="
+                ./img/main/team/img-3-270.jpg 270w,
+                ./img/main/team/img-3-354.jpg 354w, 
+                ./img/main/team/img-3-450.jpg 450w,
+                ./img/main/team/img-3-540.jpg 540w,
+                ./img/main/team/img-3-708.jpg 708w,
+                ./img/main/team/img-3-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
+                
+                src="./img/main/team/img-3-270.jpg 270w"
+                
                 alt="Член команди"
-                width="270"
+                
               />
               <div class="team__wrapper">
-                <h3 class="team__name">Николай Тарасов</h3>
+                <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
-                <ul class="team__social list">
+                <ul class="team__social">
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -339,7 +385,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -352,7 +398,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -365,7 +411,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -379,21 +425,30 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item card-set-item">
-              <!--Михаил Ермаков-->
-              <img
-                class="team__img"
-                src="./img/main/team/imgMichel.jpg"
+            <li class="team__item">
+              <!-- Михаил Ермаков -->
+              <img class="team__img"
+                srcset="
+                ./img/main/team/img-4-270.jpg 270w,
+                ./img/main/team/img-4-354.jpg 354w, 
+                ./img/main/team/img-4-450.jpg 450w,
+                ./img/main/team/img-4-540.jpg 540w,
+                ./img/main/team/img-4-708.jpg 708w,
+                ./img/main/team/img-4-900.jpg 900w"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
+                
+                src="./img/main/team/img-4-270.jpg 270w"
+                
                 alt="Член команди"
-                width="270"
+                
               />
               <div class="team__wrapper">
-                <h3 class="team__name">Михаил Ермаков</h3>
+                <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
-                <ul class="team__social list">
+                <ul class="team__social">
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -406,7 +461,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -419,7 +474,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -432,7 +487,7 @@
                   </li>
                   <li class="team__part">
                     <a
-                      class="team__links link"
+                      class="team__links"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -453,10 +508,10 @@
       <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постійні клієнти</h2>
-          <ul class="clients__list card-set list">
+          <ul class="clients__list card-set">
             <li class="clients__item card-set-item">
               <a
-                class="clients__link link"
+                class="clients__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -468,7 +523,7 @@
             </li>
             <li class="clients__item card-set-item">
               <a
-                class="clients__link link"
+                class="clients__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -480,7 +535,7 @@
             </li>
             <li class="clients__item card-set-item">
               <a
-                class="clients__link link"
+                class="clients__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -492,7 +547,7 @@
             </li>
             <li class="clients__item card-set-item">
               <a
-                class="clients__link link"
+                class="clients__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -504,7 +559,7 @@
             </li>
             <li class="clients__item card-set-item">
               <a
-                class="clients__link link"
+                class="clients__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -516,7 +571,7 @@
             </li>
             <li class="clients__item card-set-item">
               <a
-                class="clients__link link"
+                class="clients__link"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -532,16 +587,16 @@
     </main>
     <!--Футер-->
     <footer class="footer">
-      <div class="footer__container container">
+      <div class="footer__container">
         <div class="footer__logo">
-          <a class="footer__link link" href="./index.html"
+          <a class="footer__link" href="./index.html"
             ><span class="footer__accent">Web</span>Studio</a
           >
           <address class="footer__address">
-            <ul class="footer__list list">
+            <ul class="footer__list">
               <li class="footer__item">
                 <a
-                  class="footer__map link"
+                  class="footer__map"
                   href="https://goo.gl/maps/8VHhELHLWFrZVTvB6"
                   target="_blank"
                   rel="noreferrer noopener"
@@ -550,12 +605,12 @@
                 </a>
               </li>
               <li class="footer__item">
-                <a class="footer__contacts link" href="mailto:info@example.com"
+                <a class="footer__contacts" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <li class="footer__item">
-                <a class="footer__contacts link" href="tel:+380991111111"
+                <a class="footer__contacts" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -564,10 +619,10 @@
         </div>
         <div class="footer__icons">
           <h3 class="footer__title">Приєднуйтесь</h3>
-          <ul class="footer__social list">
+          <ul class="footer__social">
             <li class="footer__part">
               <a
-                class="footer__links link"
+                class="footer__links"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -580,7 +635,7 @@
             </li>
             <li class="footer__part">
               <a
-                class="footer__links link"
+                class="footer__links"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -593,7 +648,7 @@
             </li>
             <li class="footer__part">
               <a
-                class="footer__links link"
+                class="footer__links"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -606,7 +661,7 @@
             </li>
             <li class="footer__part">
               <a
-                class="footer__links link"
+                class="footer__links"
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -698,7 +753,7 @@
               type="checkbox"
               name="agreement"
             />
-            <svg class="register__icon" width="16" height="15">
+            <svg class="register__icon" width="11" height="8">
               <use
                 class="register__uncheck"
                 href="./img/icons.svg#icon-unchekdtrian"
@@ -709,7 +764,7 @@
               ></use>
             </svg>
             <span class="register__text">
-              Погоджуюсь з розсилкою та приймаю
+              Погоджуюсь&nbsp;з&nbsp;розсилкою&nbsp;та&nbsp;приймаю
               <a class="register__link" href="">Умови договору</a>
             </span>
           </label>
@@ -720,6 +775,50 @@
         </form>
       </div>
     </div>
+   
+
+     <!-- Mobile menu -->
+    <div class="menu__overlay" data-menu>
+      <div class="menu__container">
+        <button class="menu__btn" type="button" data-menu-close>
+          <svg class="menu-close-icon" width="40" height="40">
+            <use href="./img/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile__nav">
+          <li class="mobile__item">
+            <a href="index.html" class="mobile__link link">Студія</a>
+          </li>
+          <li class="mobile__item">
+            <a href="portfolio.html" class="mobile__link link">Портфоліо</a>
+          </li>
+          <li class="mobile__item">
+            <a href="" class="mobile__link link">Контакти</a>
+          </li>
+        </ul>
+        <div class="mobile__contacts">
+          <a class="mobile__phone" href="tel:+380961111111">+38 096 111 11 11</a>
+          <a class="mobile__mail" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+        </div>
+        <ul class="socials">
+          <li class="socials__item">
+            <a href="" class="socials__link">Instagram</a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link">Twitter</a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link">Facebook</a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
