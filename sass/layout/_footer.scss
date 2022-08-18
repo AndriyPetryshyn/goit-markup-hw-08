@@ -1,7 +1,12 @@
 .footer {
+
   padding: 60px 0;
   background-color: var(--bgc-col-dark);
 
+  &__container {
+  
+        justify-content: space-around;
+  }
   &__accent {
     color: var(--accent-color);
   }
@@ -36,6 +41,7 @@
   &__contacts {
     @extend %link;
     color: var(--secondary-address-color);
+     
   }
 
   &__container {
@@ -126,14 +132,27 @@
 
     transition: fill var(--animation);
   }
-  &__logo {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        padding-right: 165px;
+  &__logo 
+{
+    text-align: center;
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      
+        margin-bottom: 60px;
       }
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+       margin-right: 165px;
+       
+      }
+    @media screen and (min-width: 1200px){
     text-align: left;
     }
     
+  }
+  &__footer__icons{
+        @media screen and (min-width: 480px) and (max-width: 1199px) {
+            
+            margin-bottom: 60px;
+          }
   }
 }
 .footer__form {
@@ -147,7 +166,7 @@
 .footer__list {
   @extend %list;
 
-  margin-bottom: 60px
+
 }
 .footer__links {
   @extend %link;

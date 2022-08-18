@@ -95,12 +95,12 @@
           </div>
         </section>
       <!--Особливості-->
-      <section class="features">
-        <div class="section">
+      <section class="features__section">
+        <div class="features__container">
           <h2 class="features__title visually-hidden">Особливості</h2>
-          <ul class="features__list">
+          <ul class="features">
             <li class="features__item">
-              <div class="features__thumb thumb ">
+              <div class="features__box">
                 <svg class="features__icon item" width="70" height="70">
                   <use href=".//img/icons.svg#antenna"></use>
                 </svg>
@@ -112,7 +112,7 @@
               </p>
             </li>
             <li class="features__item">
-              <div class="features__thumb thumb">
+              <div class="features__box">
                 <svg class="features__icon item" width="70" height="70">
                   <use href=".//img/icons.svg#clock"></use>
                 </svg>
@@ -124,7 +124,7 @@
               </p>
             </li>
             <li class="features__item">
-              <div class="features__thumb thumb">
+              <div class="features__box">
                 <svg class="features__icon item" width="70" height="70">
                   <use href=".//img/icons.svg#diagram"></use>
                 </svg>
@@ -135,7 +135,7 @@
               </p>
             </li>
             <li class="features__item">
-              <div class="features__thumb thumb">
+              <div class="features__box">
                 <svg class="features__icon item" width="70" height="70">
                   <use href=".//img/icons.svg#astronaut"></use>
                 </svg>
@@ -150,8 +150,8 @@
         </div>
       </section>
       <!--Чим ми займаємось-->
-      <section class="occupation">
-        <div class="container">
+      <section class="occupation__section">
+        <div class="occupation__container">
           <h2 class="occupation__title">Чим ми займаємося</h2>
           <ul class="occupation__list card-set">
             <li class="occupation__item card-set-item">
@@ -173,6 +173,7 @@
                 src="./img/main/whatwearedoing/2img-370.jpg"
                 alt="людина тримає в руках телефон"
                 width="370"
+                height="294"
               />
               <div class="occupation__img">
                 <p class="occupation__text">Мобільні додатки</p>
@@ -184,6 +185,7 @@
                 src="./img/main/whatwearedoing/3img-370.jpg"
                 alt="людина тримає в руках планшет"
                 width="370"
+                height="294"
               />
               <div class="occupation__img">
                 <p class="occupation__text">Дизайнерські рішення</p>
@@ -193,79 +195,80 @@
         </div>
       </section>
       <!--Наша команда-->
-      <section class="team">
-        <div class="container">
+      <section class="team__section">
+        <div class="team__container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list card-set">
             <li class="team__item">
               <!-- Ігор Демяненко -->
               <img class="team__img"
                 srcset="
-                ./img/main/team/img-1-270.jpg 270w,
-                ./img/main/team/img-1-354.jpg 354w, 
-                ./img/main/team/img-1-450.jpg 450w,
-                ./img/main/team/img-1-540.jpg 540w,
-                ./img/main/team/img-1-708.jpg 708w,
-                ./img/main/team/img-1-900.jpg 900w"
+                ../img/main/team/img-1-270.jpg 270w,
+                ../img/main/team/img-1-354.jpg 354w, 
+                ../img/main/team/img-1-450.jpg 450w,
+                ../img/main/team/img-1-540.jpg 540w,
+                ../img/main/team/img-1-708.jpg 708w,
+                ../img/main/team/img-1-900.jpg 900w"
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
                 
-                src="./img/main/team/img-1-270.jpg 270w"
+                src="../img/main/team/img-1-270.jpg 270w"
                 
                 alt="Член команди"
                 
+                
               />
-              <div class="team__wrapper">
+              <div class="team__box">
                 <h3 class="team__name">Ігор Демяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
-                <ul class="team__social">
-                  <li class="team__part">
+                <ul class="team__social social">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#linkedin"></use>
                       </svg>
                     </a>
@@ -277,71 +280,72 @@
               <!-- Ольга Репина -->
               <img class="team__img"
                 srcset="
-                ./img/main/team/img-2-270.jpg 270w,
-                ./img/main/team/img-2-354.jpg 354w, 
-                ./img/main/team/img-2-450.jpg 450w,
-                ./img/main/team/img-2-540.jpg 540w,
-                ./img/main/team/img-2-708.jpg 708w,
-                ./img/main/team/img-2-900.jpg 900w"
+                ../img/main/team/img-2-270.jpg 270w,
+                ../img/main/team/img-2-354.jpg 354w, 
+                ../img/main/team/img-2-450.jpg 450w,
+                ../img/main/team/img-2-540.jpg 540w,
+                ../img/main/team/img-2-708.jpg 708w,
+                ../img/main/team/img-2-900.jpg 900w"
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
                 
-                src="./img/main/team/img-2-270.jpg 270w"
+                src="../img/main/team/img-2-270.jpg 270w"
                 
                 alt="Член команди"
                 
+                
               />
-              <div class="team__wrapper">
+              <div class="team__box">
                 <h3 class="team__name">Ольга Репіна</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
-                <ul class="team__social">
-                  <li class="team__part">
+                <ul class="team__social social">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#linkedin"></use>
                       </svg>
                     </a>
@@ -353,147 +357,147 @@
               <!-- Николай Тарасов -->
               <img class="team__img"
                 srcset="
-                ./img/main/team/img-3-270.jpg 270w,
-                ./img/main/team/img-3-354.jpg 354w, 
-                ./img/main/team/img-3-450.jpg 450w,
-                ./img/main/team/img-3-540.jpg 540w,
-                ./img/main/team/img-3-708.jpg 708w,
-                ./img/main/team/img-3-900.jpg 900w"
+                ../img/main/team/img-3-270.jpg 270w,
+                ../img/main/team/img-3-354.jpg 354w, 
+                ../img/main/team/img-3-450.jpg 450w,
+                ../img/main/team/img-3-540.jpg 540w,
+                ../img/main/team/img-3-708.jpg 708w,
+                ../img/main/team/img-3-900.jpg 900w"
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
                 
-                src="./img/main/team/img-3-270.jpg 270w"
+                src="../img/main/team/img-3-270.jpg 270w"
                 
                 alt="Член команди"
                 
+                
               />
-              <div class="team__wrapper">
+              <div class="team__box">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
-                <ul class="team__social">
-                  <li class="team__part">
+                <ul class="team__social social">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#linkedin"></use>
                       </svg>
                     </a>
-                  </li>
-                </ul>
               </div>
             </li>
             <li class="team__item">
               <!-- Михаил Ермаков -->
               <img class="team__img"
                 srcset="
-                ./img/main/team/img-4-270.jpg 270w,
-                ./img/main/team/img-4-354.jpg 354w, 
-                ./img/main/team/img-4-450.jpg 450w,
-                ./img/main/team/img-4-540.jpg 540w,
-                ./img/main/team/img-4-708.jpg 708w,
-                ./img/main/team/img-4-900.jpg 900w"
+                ../img/main/team/img-4-270.jpg 270w,
+                ../img/main/team/img-4-354.jpg 354w, 
+                ../img/main/team/img-4-450.jpg 450w,
+                ../img/main/team/img-4-540.jpg 540w,
+                ../img/main/team/img-4-708.jpg 708w,
+                ../img/main/team/img-4-900.jpg 900w"
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 480px, 100vw"
                 
-                src="./img/main/team/img-4-270.jpg 270w"
+                src="../img/main/team/img-4-270.jpg 270w"
                 
                 alt="Член команди"
                 
+                
               />
-              <div class="team__wrapper">
+              <div class="team__box">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
-                <ul class="team__social">
-                  <li class="team__part">
+                <ul class="team__social social">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="team__part">
+                  <li class="social__item">
                     <a
-                      class="team__links"
+                      class="social__link team__link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="иконка instagram"
                     >
-                      <svg class="team__icon" width="20" height="20">
+                      <svg class="social__icon" width="20" height="20">
                         <use href=".//img/icons.svg#linkedin"></use>
                       </svg>
                     </a>
@@ -505,10 +509,10 @@
         </div>
       </section>
       <!-- Клієнти -->
-      <section class="clients">
-        <div class="container">
+      <section class="clients__section">
+        <div class="clients__container">
           <h2 class="clients__title">Постійні клієнти</h2>
-          <ul class="clients__list card-set">
+          <ul class="clients card-set">
             <li class="clients__item card-set-item">
               <a
                 class="clients__link"

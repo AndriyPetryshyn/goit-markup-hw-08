@@ -1,0 +1,22 @@
+.social {
+    @extend %list;
+    @include centered-flex();
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        @include centered-flex();
+        text-decoration: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+    }
+
+    &__icon {
+        fill: #AFB1B8;
+        width: 20px;
+        height: 20px;
+    }
+}

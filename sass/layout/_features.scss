@@ -1,77 +1,70 @@
 .features {
-  @extend %container;
+  @extend %list;
+  @include centered-flex(
+    $justify-content: space-between,
+    $align-items: stretch
+  );
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
 
-  padding-top: 60px;
-  padding-bottom: 60px;
+  &__section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    @extend %container;
+  }
 
   &__title {
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
+    text-align: center;
     text-transform: uppercase;
 
-    @media screen and (max-width: 767px) {
-      text-align: center;
-    }
-  }
-
-  &__item:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+    @include media-query(tablet) {
+      text-align: left;
     }
   }
 
   &__icon {
-    border-radius: 4px;
-    background-color: #f5f4fa;
-    width: 100%;
-
-    margin-bottom: 30px;
-  }
-
-  &__list {
-    @extend %list;
-
-    display: flex;
-    justify-content: space-between;
-    
-    
-    gap: 30px;
-    padding-left: 0;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media screen and (max-width: 1199px){
-      flex-wrap: wrap;
-    }
+    width: 70px;
+    height: 70px;
   }
 
   &__item {
-    @media screen and (min-width: 768px) {
-      
-      flex-basis: calc((100% - 30px * (2 - 1)) / 2);
+    @include media-query(mobile) {
+      @include flex-basis(var(--indent), 1);
     }
 
-    &__thumb {
-      @media screen and (min-width: 768px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 270px;
-        height: 120px;
-        gap: var(--indent);
-      }
+    @include media-query(tablet) {
+      @include flex-basis(var(--indent), 2);
     }
 
+    @include media-query(desktop) {
+      @include flex-basis(var(--indent), 4);
+    }
+
+    .features__text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+
+      letter-spacing: 0.03em;
+
+      color: #757575;
+    }
+    .features__box {
+      @include centered-flex();
+      height: 120px;
+      margin-bottom: 30px;
+      background-color: #f5f4fa;
+      border-radius: 4px;
+    }
   }
-}
-.features__text {
-        font-weight: 400;
-          font-size: 14px;
-          line-height: 24px;
-        
-          letter-spacing: 0.03em;
-        
-          color: #757575;
 }
